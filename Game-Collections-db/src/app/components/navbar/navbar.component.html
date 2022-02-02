@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<div class="nav-container">
+    <span class="logo" routerLink="/">LoGo</span>
+    <form action="" class="search-form" #form="ngForm" (ngSubmit) = "onSubmit(form)">
+        <input 
+            class="search-input" 
+            name="search" 
+            type="search"
+            ngModel
+            placeholder="Search 500,000+ games..."
+        />
+        <button class="search-button">Search</button>
+        <button class="search-button-responsive"  data-value="--"></button>
+    </form>
+    <button class="hamburger-menu" (click)= "showSearchForm()" [ngClass]="{'active': hamStatus}">{{crossHam}}</button>
+</div>
