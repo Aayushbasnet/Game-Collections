@@ -11,5 +11,5 @@
         <button class="search-button">Search</button>
         <button class="search-button-responsive"  data-value="--"></button>
     </form>
-    <button class="hamburger-menu" (click)= "showSearchForm()" [ngClass]="{'active': hamStatus}">{{crossHam}}</button>
+    <button class="hamburger-menu" (click)= "showSearchForm(!hamStatus)">{{hamStatus ? 'X': '☰'}}</button>
 </div>

@@ -13,22 +13,20 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  crossHam: String = "=";
+  
+ //showing hamburger menu
   hamStatus: boolean = false;
-  //showing hamburger
-  showSearchForm(){
+  showSearchForm(hamStatus: boolean){
+    console.log(hamStatus);
     const searchForm = document.querySelector('.search-form');    // selecting search-form element
     if(!this.hamStatus){
       this.renderer.setStyle(searchForm, 'display', 'inline');    // we use Renderer2 to style css/sass
-      this.crossHam = "X";
-      this.hamStatus = !this.hamStatus;
     }
     else{
       this.renderer.setStyle(searchForm, 'display', 'none');    // we use Renderer2 to style css/sass
-      this.crossHam = "=";
-      this.hamStatus = !this.hamStatus;
     }
+    this.hamStatus = !this.hamStatus;
+
      
 }
 
