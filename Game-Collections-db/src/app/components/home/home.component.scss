@@ -27,3 +27,75 @@
             background-color: white !important;
         }
     }
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.game {
+    width: 280px;
+    height: 330px;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #202020;
+    box-shadow: 4px 3px 8px 0px rgb(80, 80, 79);
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    &:hover{
+        box-shadow: 4px 5px 15px 4px rgb(80, 80, 79);
+        transform: translateY(-3px);
+    }
+
+    &-thumb-container{
+        background-color: #000;
+        color: #fff;
+        position: relative;
+        height: 172px;
+        text-align: center;
+        
+    }
+
+    &-thumbnail {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    &-description {
+        padding: 10px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: 157px;
+    }
+
+    &-name {
+        color: rgb(192, 140, 8);
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    &-platforms {
+        display: flex;
+    }
+
+    &-platform {
+        width: 40px;
+        margin-right: 10px;
+    }
+}
